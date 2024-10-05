@@ -1,4 +1,4 @@
-Year,Age,Menopause,Tumorsize,invnodes,Breast,Metastasis,Breastquadrant,History,Diagnosis Result
+year,age,menopause,tumorsize,invnodes,breast,metastasis,breastquadrant,history,diagnosis_result
 2019,40,0,2,0,Right,0,Upper inner,0,Benign
 2019,39,0,2,0,Left,0,Upper outer,0,Benign
 2019,45,1,4,0,Left,0,Lower outer,0,Benign
