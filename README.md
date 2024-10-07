@@ -1,19 +1,11 @@
-# 🎈 Blank app template
+# 🎈 Breast Cancer Prediction app
 
-A simple Streamlit app template for you to modify!
+My Streamlit-built app helps with early detection of breast cancer by making predictions based on specific breast cancer risk factor features! 
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+### It is a demo app (not medically recommended ⚠️)! try it out and let me see what you think😉
 
-### How to run it on your own machine
 
-1. Install the requirements
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dammyidowu-breastcancerpredictionapp.streamlit.app/)
 
-   ```
-   $ pip install -r requirements.txt
-   ```
 
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dammyidowu-breastcancerpredictionapp.streamlit.app/)
