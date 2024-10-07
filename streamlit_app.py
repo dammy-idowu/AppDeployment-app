@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+pip install -U scikit-learn
 from sklearn.ensemble import GradientBoostingClassifier
 
 # Inserting header for app
