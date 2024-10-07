@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import scikit-learn as sklearn
+import sklearn
 from sklearn.ensemble import GradientBoostingClassifier
 
 # Inserting header for app
