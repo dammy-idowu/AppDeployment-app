@@ -2,12 +2,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import scikit-learn as sklearn
+import sklearn
 from sklearn.ensemble import GradientBoostingClassifier
 
 # Inserting header for app
 st.title(":reminder_ribbon: Breast Cancer Prediction app :reminder_ribbon:")
-st.info("Early discovery is key to positive prognosis. Click on the sidebar to make breast cancer prediction")
+st.info("Early detection is key to positive prognosis. Click on the sidebar icon to make breast cancer prediction")
 
 # Importing dataset
 with st.expander('Breast Cancer Data'):
@@ -100,7 +100,7 @@ df_prediction_proba = pd.DataFrame(prediction_proba)
 df_prediction_proba.columns = ['Benign', 'Malignant']
 df_prediction_proba.rename(columns={0: 'Benign', 1: 'Malignant'})
 
-# Prediction summary
+# Prediction summary preparation
 st.subheader('**Predicted Outcome**')
 st.dataframe(df_prediction_proba,
              column_config={
@@ -120,10 +120,14 @@ st.dataframe(df_prediction_proba,
                  ),
              }, hide_index=True)
 
+# Prediction outcome
 prediction_outcome = np.array(['Benign', 'Malignant'])
 st.success(str(prediction_outcome[prediction][0]))
+prediction_outcome_benign = prediction_outcome.tolist()
+prediction_benign = prediction_outcome_benign[0]
+prediction_malignant = prediction_outcome_benign[1]
+st.write(" :round_pushpin: Tap icon  for recommendation tips:round_pushpin: ")
 
-# user_input = st.success(str(prediction_outcome[prediction][0]))
 # Button to submit user input
 if st.button("Recommendation"):
     # Success message
@@ -131,8 +135,10 @@ if st.button("Recommendation"):
     
     # Display recommendation
     st.write("Based on the app prediction, we recommend:")
-    if st.success(str(prediction_outcome[prediction][0])) == 'Benign':
-        st.write("Regular self and clinical breast examinations and healthy lifestyle practises such as maintaining healthy weight, exercising, are recommended as they attenuate mechanisms that may promote breast cancer carcinogenesis. Kia Ora")
+    
+    if prediction_benign in str(prediction_outcome[prediction][0]):
+        st.success("Regular self and clinical breast examinations be conducted to monitor breast cancer health risk. Also, healthy lifestyle practises such as maintaining healthy weight, exercising, are strongly recommended in order to attenuate mechanisms that may promote breast cancer carcinogenesis. Kia Ora")
     else:
-        st.write("You are fine :smile:, this is just a demo app. However, adopt healthy lifestyle practises and conduct regular self/clinical breast cancer examination checks. Consult a physician if you observe unusual symptoms in your breast. Kia Ora")
+        if prediction_malignant in (str(prediction_outcome[prediction][0])):
+            st.success("You are fine :smile:, this is just a demo app. However, adopt healthy lifestyle practises and conduct regular self/clinical breast cancer examination checks. Consult a physician if you observe unusual symptoms in your breast. Kia Ora")
 
