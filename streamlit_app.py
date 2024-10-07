@@ -31,13 +31,13 @@ with st.sidebar:
     st.header('Input features')
     year = st.selectbox('Year', (2019,2020,2021,2022,2023,2024,2025))
     age = st.slider('Age', 13, 77, 44)
-    menopause = st.selectbox('Menopause', (0, 1))
-    tumorsize = st.slider('Tumor Size', 1, 12, 6)
-    invnodes = st.selectbox('Inv nodes', (0, 1, 3))
+    menopause = st.selectbox('Menopausal Status', ('True', 'False'))
+    tumorsize = st.slider('Tumor Size (cm)', 1, 12, 6)
+    invnodes = st.selectbox('Tumor-bearing nodes', (0, 1, 3))
     breast = st.selectbox('Breast position', ('Right', 'Left'))
-    metastasis = st.selectbox('Metastasis', (0, 1))
+    metastasis = st.selectbox('Metastasis', ('True', 'False'))
     breastquadrant = st.selectbox('Breast Quadrant', ('Upper inner','Upper outer', 'Lower outer', 'Lower inner'))
-    history = st.selectbox('History', (0, 1))
+    history = st.selectbox('Previous History', ('Yes', 'No'))
 
 # Create a DataFrame for the input features
     data = {'year': year,
