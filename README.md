@@ -13,7 +13,7 @@ My Streamlit-built app helps with early detection of breast cancer by making pre
 
 
 
-##### Shoutout to Streamlit 🏆 for helping me achieve this task of bringing my code to practical use! 
+##### Shoutout to Streamlit 🏆 for helping achieve this task of bringing my code to practical application! 
 
 
 
