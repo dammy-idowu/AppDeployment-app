@@ -9,9 +9,18 @@ from sklearn.ensemble import GradientBoostingClassifier
 st.title(":reminder_ribbon: Breast Cancer Prediction app :reminder_ribbon:")
 st.info("Early detection is key to positive prognosis. Click on the sidebar icon to make breast cancer prediction")
 
+# App use instruction
+with st.expander(' :rotating_light: **Click to learn how to use this app**'):
+    st.write(':one: Click on the sidebar icon at the top left corner of your screen :iphone: ')
+    st.write(':two: Make selection into input feature menu')
+    st.write(':three: Kindly :woman-running: past the next three columns, technical jargon :smile: ')
+    st.write(':four: Scroll down to predicted outcome to view result')
+    st.write(':five: Click on recommendation')
+    st.write(':six: Thank you for trying this app :grin: ')
+
 # Importing dataset
 with st.expander('Breast Cancer Data'):
-    st.write('**Raw data**')
+    st.write('Raw data')
     df = pd.read_csv("https://raw.githubusercontent.com/dammy-idowu/AppDeployment-app/refs/heads/main/streamlit_data.csv")
     df
 
@@ -37,7 +46,7 @@ with st.sidebar:
     breast = st.selectbox('Breast position', ('Right', 'Left'))
     metastasis = st.selectbox('Metastasis', (0, 1))
     breastquadrant = st.selectbox('Breast quadrant', ('Upper inner','Upper outer', 'Lower outer', 'Lower inner'))
-    history = st.selectbox('Previous history', (0, 1))
+    history = st.selectbox('Family history', (0, 1))
 
 # Create a DataFrame for the input features
     data = {'year': year,
